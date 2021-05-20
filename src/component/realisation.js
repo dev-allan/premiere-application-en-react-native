@@ -1,12 +1,16 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, Button } from 'react-native';
+import Screen1 from './realisation-detail/screen1';
 
 export default Realisation = () => {
+    
     return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+    <SafeAreaView style={styles.container}>
         <View style={styles.block}>
-            <Image style={styles.image} source={require('../img/mur.jpg')}/>
+            <TouchableOpacity onPress={() => alert('hello')}>
+                <Image style={styles.image} source={require('../img/mur.jpg')}/>
+            </TouchableOpacity>
             <View style={styles.blockText}>
                 <Text style={styles.blockText_titre}>Plafond et mur</Text>
                 <Text style={styles.blockText_texte}>
@@ -14,7 +18,40 @@ export default Realisation = () => {
                 </Text>
             </View>
         </View>
-    </View>
+        <View style={styles.block}>
+            <TouchableOpacity>
+                <Image style={styles.image} source={require('../img/mur.jpg')}/>
+            </TouchableOpacity>
+            <View style={styles.blockText}>
+                <Text style={styles.blockText_titre}>Plafond et mur</Text>
+                <Text style={styles.blockText_texte}>
+                    Lorem ipsum dolor sit amet,{"\n"} consectetur adipiscing elit.{"\n"} Sed suscipit ultricies{"\n"} massa eget fermentum.
+                </Text>
+            </View>
+        </View>
+        <View style={styles.block}>
+            <TouchableOpacity>
+                <Image style={styles.image} source={require('../img/mur.jpg')}/>
+            </TouchableOpacity>
+            <View style={styles.blockText}>
+                <Text style={styles.blockText_titre}>Plafond et mur</Text>
+                <Text style={styles.blockText_texte}>
+                    Lorem ipsum dolor sit amet,{"\n"} consectetur adipiscing elit.{"\n"} Sed suscipit ultricies{"\n"} massa eget fermentum.
+                </Text>
+            </View>
+        </View>
+        <View style={styles.block}>
+            <TouchableOpacity>
+                <Image style={styles.image} source={require('../img/mur.jpg')}/>
+            </TouchableOpacity>
+            <View style={styles.blockText}>
+                <Text style={styles.blockText_titre}>Plafond et mur</Text>
+                <Text style={styles.blockText_texte}>
+                    Lorem ipsum dolor sit amet,{"\n"} consectetur adipiscing elit.{"\n"} Sed suscipit ultricies{"\n"} massa eget fermentum.
+                </Text>
+            </View>
+        </View>
+    </SafeAreaView>
     )
 }
 
@@ -22,7 +59,7 @@ const styles = StyleSheet.create({
     container: {
         flex: 1,
         padding: 10,
-        backgroundColor: "#BF9292"
+        backgroundColor: "#E23F3F"
     },
 
     block: {
@@ -32,6 +69,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         borderBottomColor: 'black',
         borderBottomWidth: 1,
+        marginBottom: 'auto',
+        marginTop: 'auto',
     },
 
     image: {
@@ -50,5 +89,5 @@ const styles = StyleSheet.create({
 
     blockText_texte: {
         textAlign: 'justify',
-    }
+    },
 })

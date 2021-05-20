@@ -1,11 +1,42 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { Text, View } from 'react-native';
+import { StyleSheet, SafeAreaView, Text, View, Systrace } from 'react-native';
 
 export default Contact= () => {
     return(
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-        <Text>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum ut egestas leo. Nullam suscipit ex interdum, viverra nunc non, tincidunt augue. Ut quis lacus vulputate justo mattis interdum ut nec ante. Nunc tincidunt lacus eros. Aenean sed turpis dui. Etiam convallis lacus eget risus congue auctor. Phasellus in tempor ante. Curabitur eget facilisis lorem. Interdum et malesuada fames ac ante ipsum primis in faucibus. Nullam quis magna mauris. Curabitur volutpat nulla id enim malesuada, a bibendum erat sollicitudin. Etiam mollis, arcu vitae suscipit molestie, mauris nisl gravida diam, sed efficitur leo erat porttitor massa. Sed elementum vel est non fermentum. Etiam pharetra elit est, auctor sollicitudin mauris bibendum ut.</Text>
-    </View>
+    <SafeAreaView style={styles.container}>
+        <View style={styles.contact}>
+            <Text style={styles.contactMobile}>06 11 62 34 22</Text>
+            <Text style={styles.contactFix}>03 22 72 11 91</Text>
+            <Text style={styles.contactEmail}>johann.pupin@orange.fr</Text>
+        </View>
+    </SafeAreaView>
     )
 }
+
+const styles = StyleSheet.create({
+    container: {
+        flex: 1,
+        backgroundColor: "#EA7A7A",
+    },
+
+    contact: {
+        marginLeft: "auto",
+        marginRight: 'auto',
+        marginBottom: 'auto',
+        marginTop: 'auto',
+    },
+
+    contactMobile: {
+        fontSize: 32,
+    },
+
+    contactFix: {
+        fontSize: 32,
+    },
+
+    contactEmail: {
+        fontSize: 20,
+        marginTop: 10,
+    }
+})

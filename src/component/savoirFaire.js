@@ -1,10 +1,10 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
 
 export default SavoirFaire = () => {
     return(
-    <View style={styles.container}>
+    <SafeAreaView style={styles.container}>
         <View style={styles.block}>
             <Image style={styles.image} source={require('../img/mur.jpg')}/>
             <View style={styles.blockText}>
@@ -37,7 +37,7 @@ export default SavoirFaire = () => {
             </View>
             <Image style={styles.image} source={require('../img/façade.jpg')}/>
         </View>
-    </View>
+    </SafeAreaView>
     )
 }
 
@@ -55,6 +55,8 @@ const styles = StyleSheet.create({
         paddingBottom: 10,
         borderBottomColor: 'black',
         borderBottomWidth: 1,
+        marginBottom: 'auto',
+        marginTop: 'auto',
     },
 
     image: {
