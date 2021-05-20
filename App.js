@@ -1,21 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import React from 'react';
+import 'react-native-gesture-handler';
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
+import Accueil from './src/component/accueil' 
+import SavoirFaire from './src/component/savoirFaire';
+import Realisation from './src/component/realisation';
+import Contact from './src/component/contact';
+
+const Tab = createBottomTabNavigator();
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
-      <StatusBar style="auto" />
-    </View>
+      <NavigationContainer>
+        <Tab.Navigator>
+          <Tab.Screen name="Accueil" component={Accueil}
+           options={{
+            tabBarLabel: 'Accueil'
+          }}/>
+          <Tab.Screen name="Savoir  Faire" component={SavoirFaire}
+           options={{
+            tabBarLabel: 'Savoir Faire'
+          }}/>
+          <Tab.Screen name="Realisations" component={Realisation}
+           options={{
+            tabBarLabel: 'Realisations'
+          }}/>
+          <Tab.Screen name="Contact" component={Contact}
+           options={{
+            tabBarLabel: 'Contact'
+          }}/>
+        </Tab.Navigator>
+      </NavigationContainer>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
