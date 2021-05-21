@@ -1,10 +1,11 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar } from 'react-native';
 
 export default SavoirFaire = () => {
     return(
     <SafeAreaView style={styles.container}>
+        <StatusBar/>
         <View style={styles.block}>
             <Image style={styles.image} source={require('../img/mur.jpg')}/>
             <View style={styles.blockText}>
