@@ -1,14 +1,12 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Accueil from './src/component/accueil' 
 import SavoirFaire from './src/component/savoirFaire';
 import Realisation from './src/component/realisation';
 import Contact from './src/component/contact';
-import Icon from 'react-native-vector-icons/';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const Tab = createBottomTabNavigator();
@@ -49,7 +47,7 @@ export default function App() {
               borderTopLeftRadius: 20,
               height: 55,
               paddingBottom: 5,
-         }
+            }
             }}>
           <Tab.Screen name="Accueil" component={Accueil}
            options={{

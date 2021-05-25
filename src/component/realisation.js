@@ -5,7 +5,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { StackNavigator } from "react-navigation";
 import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
 
-//Importation des écrans détails des réalisations
+//Importation des écrans 'détails des réalisations'
 import Screen1 from './realisation-detail/screen1';
 import Screen2 from './realisation-detail/screen2';
 import Screen3 from './realisation-detail/screen3';
@@ -16,51 +16,53 @@ const ViewRealisation = ({ navigation }) => {
     return(
     <ScrollView style={styles.container}>
         <StatusBar/>
-        <View style={styles.header}>
-            <Text style={styles.headerText}>Nos réalisations</Text>
-        </View>
-        <View style={styles.block}>
-            <TouchableOpacity onPress={() => navigation.navigate("Plafond et mur")}>
-                <Image style={styles.image} source={require('../img/cuisinePlafondMurRealisation.jpg')}/>
-            </TouchableOpacity>
-            <View style={styles.blockText}>
-                <Text style={styles.blockText_titre}>Plafond et mur</Text>
-                <Text style={styles.blockText_texte}>
-                    Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
-                </Text>
+        <View style={styles.blockView}>
+            <View style={styles.header}>
+                <Text style={styles.headerText}>Nos réalisations</Text>
             </View>
-        </View>
-        <View style={styles.block}>
-            <TouchableOpacity onPress={() => navigation.navigate("Sol et escalier")}>
-                <Image style={styles.image} source={require('../img/solEscalierRealisation.jpg')}/>
-            </TouchableOpacity>
-            <View style={styles.blockText}>
-                <Text style={styles.blockText_titre}>Sol et escalier</Text>
-                <Text style={styles.blockText_texte}>
-                    Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
-                </Text>
+            <View style={styles.block}>
+                <TouchableOpacity onPress={() => navigation.navigate("Plafond et mur")}>
+                    <Image style={styles.image} source={require('../img/cuisinePlafondMurRealisation.jpg')}/>
+                </TouchableOpacity>
+                <View style={styles.blockText}>
+                    <Text style={styles.blockText_titre}>Plafond et mur</Text>
+                    <Text style={styles.blockText_texte}>
+                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                    </Text>
+                </View>
             </View>
-        </View>
-        <View style={styles.block}>
-            <TouchableOpacity onPress={() => navigation.navigate("Menuiserie")}>
-                <Image style={styles.image} source={require('../img/menuiserieRealisation.png')}/>
-            </TouchableOpacity>
-            <View style={styles.blockText}>
-                <Text style={styles.blockText_titre}>Menuiserie</Text>
-                <Text style={styles.blockText_texte}>
-                    Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
-                </Text>
+            <View style={styles.block}>
+                <TouchableOpacity onPress={() => navigation.navigate("Sol et escalier")}>
+                    <Image style={styles.image} source={require('../img/solEscalierRealisation.jpg')}/>
+                </TouchableOpacity>
+                <View style={styles.blockText}>
+                    <Text style={styles.blockText_titre}>Sol et escalier</Text>
+                    <Text style={styles.blockText_texte}>
+                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                    </Text>
+                </View>
             </View>
-        </View>
-        <View style={styles.block}>
-            <TouchableOpacity onPress={() => navigation.navigate("Façade")}>
-                <Image style={styles.image} source={require('../img/facadeRealisation.png')}/>
-            </TouchableOpacity>
-            <View style={styles.blockText}>
-                <Text style={styles.blockText_titre}>Façade</Text>
-                <Text style={styles.blockText_texte}>
-                    Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
-                </Text>
+            <View style={styles.block}>
+                <TouchableOpacity onPress={() => navigation.navigate("Menuiserie")}>
+                    <Image style={styles.image} source={require('../img/menuiserieRealisation.png')}/>
+                </TouchableOpacity>
+                <View style={styles.blockText}>
+                    <Text style={styles.blockText_titre}>Menuiserie</Text>
+                    <Text style={styles.blockText_texte}>
+                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                    </Text>
+                </View>
+            </View>
+            <View style={styles.block}>
+                <TouchableOpacity onPress={() => navigation.navigate("Façade")}>
+                    <Image style={styles.image} source={require('../img/facadeRealisation.png')}/>
+                </TouchableOpacity>
+                <View style={styles.blockText}>
+                    <Text style={styles.blockText_titre}>Façade</Text>
+                    <Text style={styles.blockText_texte}>
+                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                    </Text>
+                </View>
             </View>
         </View>
     </ScrollView>
@@ -102,6 +104,10 @@ const styles = StyleSheet.create({
         backgroundColor: 'black',
         paddingBottom: 8,
     },
+    
+    blockView: {
+        paddingBottom: 60,
+    },
 
     headerText: {
         color: 'gray',
@@ -114,7 +120,7 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
         marginTop: 30,
-        marginLeft: 0,
+        margin: 10,
         borderWidth: 1,
         borderColor: "#20232a",
         borderRadius: 6,
@@ -124,6 +130,7 @@ const styles = StyleSheet.create({
         width: 150,
         height: 130,
         borderRadius: 6,
+        marginRight: 5,
     },
 
     blockText: {
