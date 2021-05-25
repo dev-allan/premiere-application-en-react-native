@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, SafeAreaView, Text, View, Linking, Platform, TouchableOpacity } from 'react-native';
+import { StyleSheet, SafeAreaView, Text, View, Linking, Platform, TouchableOpacity, Image } from 'react-native';
 
 const adresseGPS = () => {
     const url = Platform.select({
@@ -39,7 +39,8 @@ export default Contact = () => {
             <Text style={styles.headerText}>Nous contacter</Text>
         </View>
         <View style={styles.contact}>
-            <TouchableOpacity onPress={adresseGPS}>
+            <TouchableOpacity onPress={adresseGPS} style={styles.blockLocalisation}>
+                <Image style={styles.iconGPS} source={require('../img/iconGPS.png')}/>
                 <Text style={styles.adresseTexte}>96 rue Richard de Fournival{"\n"}80090 Amiens</Text>
             </TouchableOpacity>
             <TouchableOpacity onPress={makeCallCellPhone}>
@@ -81,11 +82,15 @@ const styles = StyleSheet.create({
         marginTop: 'auto',
     },
 
+    blockLocalisation: {
+        flexDirection: "row"
+    },
+
     contactMobile: {
         fontSize: 32,
         backgroundColor: 'red',
         marginBottom: 10,
-        borderRadius: 6,
+        borderRadius: 60,
         paddingLeft: 5,
         paddingRight: 5,
         borderWidth: 4,
@@ -97,7 +102,7 @@ const styles = StyleSheet.create({
         fontSize: 32,
         backgroundColor: 'red',
         marginBottom: 10,
-        borderRadius: 6,
+        borderRadius: 60,
         paddingLeft: 5,
         paddingRight: 5,
         borderWidth: 4,

@@ -1,6 +1,7 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import * as React from 'react';
 import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Accueil from './src/component/accueil' 
@@ -9,7 +10,7 @@ import Realisation from './src/component/realisation';
 import Contact from './src/component/contact';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-const Tab = createBottomTabNavigator();
+const Tab = createMaterialTopTabNavigator();
 
 export default function App() {
   return (
@@ -22,15 +23,19 @@ export default function App() {
             
             if (route.name === 'Accueil') {
             iconName = 'home-outline';
+            size = 24;
             }
             if (route.name === 'Savoir Faire') {
             iconName = 'construct-outline';
+            size = 24;
             }
             if (route.name === 'Realisations'){
               iconName= 'color-wand-outline'
+              size = 24;
             }
             if(route.name === 'Contact'){
-              iconName='information-circle-outline'
+              iconName='information-circle-outline';
+              size = 24;
             }
             
             return <Ionicons name = {iconName} size={size} color={color} />;
@@ -39,15 +44,14 @@ export default function App() {
             tabBarOptions={{
             activeTintColor: 'red',
             inactiveTintColor: 'gray',
+            showIcon: true,
             style: {
-              borderTopWidth: 0,
-              position: 'absolute',
+              borderTopWidth: 10,
               backgroundColor: 'black',
-              borderTopRightRadius: 20,
-              borderTopLeftRadius: 20,
-              height: 55,
-              paddingBottom: 5,
-            }
+            },
+            labelStyle: {
+              fontSize: 10,
+            },
             }}>
           <Tab.Screen name="Accueil" component={Accueil}
            options={{

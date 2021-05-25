@@ -27,7 +27,7 @@ const ViewRealisation = ({ navigation }) => {
                 <View style={styles.blockText}>
                     <Text style={styles.blockText_titre}>Plafond et mur</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
                     </Text>
                 </View>
             </View>
@@ -38,7 +38,7 @@ const ViewRealisation = ({ navigation }) => {
                 <View style={styles.blockText}>
                     <Text style={styles.blockText_titre}>Sol et escalier</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                       Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
                     </Text>
                 </View>
             </View>
@@ -49,7 +49,7 @@ const ViewRealisation = ({ navigation }) => {
                 <View style={styles.blockText}>
                     <Text style={styles.blockText_titre}>Menuiserie</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
                     </Text>
                 </View>
             </View>
@@ -60,7 +60,7 @@ const ViewRealisation = ({ navigation }) => {
                 <View style={styles.blockText}>
                     <Text style={styles.blockText_titre}>Façade</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit amet,{"\n"}consectetur adipiscing elit.{"\n"}Sed suscipit ultricies{"\n"}massa eget fermentum.
+                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
                     </Text>
                 </View>
             </View>
@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     },
     
     blockView: {
-        paddingBottom: 60,
+        paddingBottom: 80,
     },
 
     headerText: {
@@ -121,9 +121,16 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginTop: 30,
         margin: 10,
-        borderWidth: 1,
-        borderColor: "#20232a",
-        borderRadius: 6,
+        padding: 10,
+        shadowColor: "#000",
+        shadowOffset: {
+            width: 0,
+            height: 2,
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+
+        elevation: 2,
     },
 
     image: {
@@ -131,6 +138,8 @@ const styles = StyleSheet.create({
         height: 130,
         borderRadius: 6,
         marginRight: 5,
+        borderColor: 'black',
+        borderWidth: 1,
     },
 
     blockText: {

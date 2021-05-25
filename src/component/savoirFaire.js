@@ -54,7 +54,7 @@ const styles = StyleSheet.create({
     },
 
     blockView: {
-        paddingBottom: 60,
+        paddingBottom: 80,
     },
 
     header: {
@@ -80,7 +80,7 @@ const styles = StyleSheet.create({
     },
 
     image: {
-        width: 150,
+        width: 130,
         height: 130,
         borderRadius: 6,
     },

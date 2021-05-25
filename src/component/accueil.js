@@ -1,10 +1,13 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView } from 'react-native';
+import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar } from 'react-native';
+
+
 
 export default Accueil = () => {
     return(
     <SafeAreaView style={styles.container}>
+        <StatusBar/>
         <View style={styles.accueil}>
             <Image style={styles.logo} source={require("../img/Logo.png")}/>
             <Image style={styles.logoPeinture80} source={require("../img/peinture80.png")}/>
@@ -33,6 +36,7 @@ const styles = StyleSheet.create({
 
     logo: {
         alignSelf: "center",
+        marginTop: -30,
     },
 
     logoPeinture80: {
