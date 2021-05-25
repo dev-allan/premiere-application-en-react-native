@@ -35,9 +35,6 @@ const goToMail = () => {
 export default Contact = () => {
     return(
     <SafeAreaView style={styles.container}>
-        <View style={styles.header}>
-            <Text style={styles.headerText}>Nous contacter</Text>
-        </View>
         <View style={styles.contact}>
             <TouchableOpacity onPress={adresseGPS} style={styles.blockLocalisation}>
                 <Image style={styles.iconGPS} source={require('../img/iconGPS.png')}/>

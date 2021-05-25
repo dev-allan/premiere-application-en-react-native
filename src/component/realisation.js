@@ -17,9 +17,6 @@ const ViewRealisation = ({ navigation }) => {
     <ScrollView style={styles.container}>
         <StatusBar/>
         <View style={styles.blockView}>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Nos réalisations</Text>
-            </View>
             <View style={styles.block}>
                 <TouchableOpacity onPress={() => navigation.navigate("Plafond et mur")}>
                     <Image style={styles.image} source={require('../img/cuisinePlafondMurRealisation.jpg')}/>

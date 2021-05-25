@@ -7,9 +7,6 @@ export default SavoirFaire = () => {
     <ScrollView style={styles.container}>
         <StatusBar/>
         <View style={styles.blockView}>
-            <View style={styles.header}>
-                <Text style={styles.headerText}>Notre Savoir Faire</Text>
-            </View>
             <View style={styles.block}>
                 <Image style={styles.image} source={require('../img/mur.jpg')}/>
                 <View style={styles.blockText}>
