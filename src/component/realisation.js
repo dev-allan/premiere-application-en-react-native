@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
         justifyContent: "space-between",
         marginTop: 30,
         margin: 10,
-        padding: 10,
+        // padding: 10,
         borderRadius: 6,
         shadowOffset: { width: 10, height: 10 },
         shadowColor: 'black',
@@ -132,7 +132,7 @@ const styles = StyleSheet.create({
         borderRadius: 6,
         marginRight: 5,
         borderColor: 'black',
-        borderWidth: 1,
+        // borderWidth: 1,
     },
 
     blockText: {

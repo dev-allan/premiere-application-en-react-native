@@ -18,23 +18,11 @@ export default function App() {
             screenOptions={({ route }) => ({
               tabBarIcon: ({ color, size }) => {
                 let iconName;
-                if (route.name === 'Accueil') {
-                iconName = 'home-outline';
-                size = 24;
-                }
-                if (route.name === 'Savoir Faire') {
-                iconName = 'construct-outline';
-                size = 24;
-                }
-                if (route.name === 'Realisations'){
-                  iconName= 'color-wand-outline'
-                  size = 24;
-                }
-                if(route.name === 'Contact'){
-                  iconName='information-circle-outline';
-                  size = 24;
-                }
-              
+                let sizeIcon = 24;
+                if (route.name === 'Accueil') iconName= 'home'; size=sizeIcon;
+                if (route.name ==='Savoir Faire') iconName = 'construct'; size=sizeIcon;
+                if (route.name ==='Realisations') iconName = 'color-wand'; size=sizeIcon;
+                if (route.name ==='Contact') iconName = 'information-circle'; size=sizeIcon;
                 return <Ionicons name = {iconName} size={size} color={color} />;
               },
             })}
@@ -44,12 +32,14 @@ export default function App() {
               inactiveTintColor: '#383838',
               showIcon: true,
               style: {
-                borderTopWidth: 10,
                 backgroundColor: '#A49898',
-            },
-            labelStyle: {
-              fontSize: 10,
-            },
+              },
+              labelStyle: {
+                fontSize: 10,
+              },
+              indicatorStyle:{
+                backgroundColor:"#FFF",
+              },
             }}>
           <Tab.Screen name="Accueil" component={Accueil}
            options={{
