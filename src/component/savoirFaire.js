@@ -47,7 +47,7 @@ export default SavoirFaire = () => {
 const styles = StyleSheet.create({
     container: {
         // flex: 1,
-        backgroundColor: "#c92a2a",
+        backgroundColor: "#B5ABAD",
     },
 
     blockView: {
@@ -70,10 +70,14 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
         marginTop: 30,
-        borderWidth: 1,
         borderColor: "#20232a",
         borderRadius: 6,
         margin: 10,
+        shadowOffset: { width: 10, height: 10 },
+        shadowColor: 'black',
+        shadowOpacity: 1,
+        elevation: 6,
+        backgroundColor : "#FFF",
     },
 
     image: {

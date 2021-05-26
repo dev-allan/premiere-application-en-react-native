@@ -94,7 +94,7 @@ export default Realisation;
 
 const styles = StyleSheet.create({
     container: {
-        backgroundColor: "#c92a2a",
+        backgroundColor: "#B5ABAD",
     },
 
     header: {
@@ -119,15 +119,11 @@ const styles = StyleSheet.create({
         marginTop: 30,
         margin: 10,
         padding: 10,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2,
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-
-        elevation: 2,
+        shadowOffset: { width: 10, height: 10 },
+        shadowColor: 'black',
+        shadowOpacity: 1,
+        elevation: 6,
+        backgroundColor : "#FFF",
     },
 
     image: {

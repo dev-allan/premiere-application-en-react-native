@@ -57,7 +57,7 @@ export default Contact = () => {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        backgroundColor: "#c92a2a",
+        backgroundColor: "#B5ABAD",
     },
 
     header: {
@@ -85,7 +85,7 @@ const styles = StyleSheet.create({
 
     contactMobile: {
         fontSize: 32,
-        backgroundColor: 'red',
+        backgroundColor: '#FFF',
         marginBottom: 10,
         borderRadius: 60,
         paddingLeft: 5,
@@ -97,7 +97,7 @@ const styles = StyleSheet.create({
 
     contactFix: {
         fontSize: 32,
-        backgroundColor: 'red',
+        backgroundColor: '#FFF',
         marginBottom: 10,
         borderRadius: 60,
         paddingLeft: 5,
