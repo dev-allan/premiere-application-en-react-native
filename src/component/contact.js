@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, SafeAreaView, Text, View, Linking, Platform, TouchableOpacity, Image } from 'react-native';
+import { StyleSheet, SafeAreaView, Text, View, Linking, Platform, TouchableOpacity, Image, Button } from 'react-native';
 
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -63,6 +63,11 @@ export default Contact = () => {
                 <Text style={styles.contactEmail}>johann.pupin@orange.fr</Text>
             </TouchableOpacity>
         </View>
+        <Button 
+            title="Prendre Rendez-vous"
+            color="black"
+            onPress={goToMail}
+        />
     </SafeAreaView>
     )
 }
