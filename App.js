@@ -40,12 +40,12 @@ export default function App() {
             })}
 
             tabBarOptions={{
-            activeTintColor: '#FFF',
-            inactiveTintColor: 'gray',
-            showIcon: true,
-            style: {
-              borderTopWidth: 10,
-              backgroundColor: 'black',
+              activeTintColor: '#FFF',
+              inactiveTintColor: '#383838',
+              showIcon: true,
+              style: {
+                borderTopWidth: 10,
+                backgroundColor: '#A49898',
             },
             labelStyle: {
               fontSize: 10,
