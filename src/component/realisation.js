@@ -1,15 +1,13 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StackNavigator } from "react-navigation";
 import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
 
-//Importation des écrans 'détails des réalisations'
-import Screen1 from './realisation-detail/screen1';
-import Screen2 from './realisation-detail/screen2';
-import Screen3 from './realisation-detail/screen3';
-import Screen4 from './realisation-detail/screen4';
+//Importation des écrans 'détails des réalisations' pour la navigation
+import Screen1 from './realisation_detail/screen1';
+import Screen2 from './realisation_detail/screen2';
+import Screen3 from './realisation_detail/screen3';
+import Screen4 from './realisation_detail/screen4';
 
 
 const ViewRealisation = ({ navigation }) => {
@@ -68,7 +66,8 @@ const ViewRealisation = ({ navigation }) => {
 
 const Stack = createStackNavigator();
 
-function Realisation() {
+//fonction permettant la navigation
+const Realisation = () => {
     return (
         <Stack.Navigator initialRouteName="Realisation" 
         screenOptions={{ 
@@ -119,6 +118,7 @@ const styles = StyleSheet.create({
         marginTop: 30,
         margin: 10,
         padding: 10,
+        borderRadius: 6,
         shadowOffset: { width: 10, height: 10 },
         shadowColor: 'black',
         shadowOpacity: 1,

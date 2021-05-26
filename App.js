@@ -1,9 +1,7 @@
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
 import * as React from 'react';
-import { SafeAreaView, StyleSheet, Text, View } from 'react-native';
 import Accueil from './src/component/accueil' 
 import SavoirFaire from './src/component/savoirFaire';
 import Realisation from './src/component/realisation';
@@ -16,31 +14,31 @@ export default function App() {
   return (
       <NavigationContainer>
         <Tab.Navigator
-        initialRouteName={'Accueil'}
-          screenOptions={({ route }) => ({
-            tabBarIcon: ({ focused, color, size }) => {
-            let iconName;
-            
-            if (route.name === 'Accueil') {
-            iconName = 'home-outline';
-            size = 24;
-            }
-            if (route.name === 'Savoir Faire') {
-            iconName = 'construct-outline';
-            size = 24;
-            }
-            if (route.name === 'Realisations'){
-              iconName= 'color-wand-outline'
-              size = 24;
-            }
-            if(route.name === 'Contact'){
-              iconName='information-circle-outline';
-              size = 24;
-            }
-            
-            return <Ionicons name = {iconName} size={size} color={color} />;
-            },
+          initialRouteName={'Accueil'}
+            screenOptions={({ route }) => ({
+              tabBarIcon: ({ color, size }) => {
+                let iconName;
+                if (route.name === 'Accueil') {
+                iconName = 'home-outline';
+                size = 24;
+                }
+                if (route.name === 'Savoir Faire') {
+                iconName = 'construct-outline';
+                size = 24;
+                }
+                if (route.name === 'Realisations'){
+                  iconName= 'color-wand-outline'
+                  size = 24;
+                }
+                if(route.name === 'Contact'){
+                  iconName='information-circle-outline';
+                  size = 24;
+                }
+              
+                return <Ionicons name = {iconName} size={size} color={color} />;
+              },
             })}
+
             tabBarOptions={{
             activeTintColor: '#FFF',
             inactiveTintColor: 'gray',

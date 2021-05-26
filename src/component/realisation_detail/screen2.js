@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 
 const Screen2 = () => {
     return(

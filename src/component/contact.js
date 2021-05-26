@@ -2,14 +2,21 @@ import 'react-native-gesture-handler';
 import * as React from 'react';
 import { StyleSheet, SafeAreaView, Text, View, Linking, Platform, TouchableOpacity, Image } from 'react-native';
 
+
+/////////////////////////////////////////////////////////////////////////////////
+/* Liste des fonctions de la page contact pour le renvoie vers les applications*/
+////////////////////////////////////////////////////////////////////////////////
+
+//fonction permettant au bouton de l'adresse postale de renvoyer vers une application GPS
 const adresseGPS = () => {
     const url = Platform.select({
         ios: `maps:0,0?q=${'96 rue Richard de Fournival 80090 Amiens'}`,
         android: `geo:0,0?q=${'96 rue Richard de Fournival 80090 Amiens'}`,
       })
       Linking.openURL(url)
-}
+};
 
+//fonction permettant au bouton du numéro de téléphone portable de renvoyer vers le répertoire
 const makeCallCellPhone = () => {
     let phoneNumber = '';
     Platform.select({
@@ -19,6 +26,7 @@ const makeCallCellPhone = () => {
     Linking.openURL(phoneNumber);
 };
 
+//fonction permettant au bouton du numéro de téléphone fixe de renvoyer vers le répertoire
 const makeCallFixPhone = () => {
     let phoneNumber = '';
     Platform.select({
@@ -28,9 +36,14 @@ const makeCallFixPhone = () => {
     Linking.openURL(phoneNumber);
 };
 
+//fonction permettant au bouton de l'adresse mail de renvoyer vers une application mail
 const goToMail = () => {
     Linking.openURL('mailto:johann.pupin@orange.fr?subject=Demande de devis&body=Bonjour Peinture80')
 };
+
+//////////////////////////////////////////////////////////////////////////////////////////////
+///////////////////////*Fin de la liste des fonctions*///////////////////////////////////////
+/////////////////////////////////////////////////////////////////////////////////////////////
 
 export default Contact = () => {
     return(

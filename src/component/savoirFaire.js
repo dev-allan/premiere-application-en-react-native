@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, StatusBar, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, StatusBar, ScrollView } from 'react-native';
 
 export default SavoirFaire = () => {
     return(
@@ -46,7 +46,6 @@ export default SavoirFaire = () => {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: "#B5ABAD",
     },
 
@@ -70,7 +69,6 @@ const styles = StyleSheet.create({
         flexDirection: 'row',
         justifyContent: "space-between",
         marginTop: 30,
-        borderColor: "#20232a",
         borderRadius: 6,
         margin: 10,
         shadowOffset: { width: 10, height: 10 },

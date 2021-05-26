@@ -1,13 +1,13 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
-import { StyleSheet, Text, View, Image, SafeAreaView, ScrollView } from 'react-native';
+import { StyleSheet, Text, Image, SafeAreaView, ScrollView } from 'react-native';
 
-const Screen3 = () => {
+const Screen1 = () => {
     return(
         <SafeAreaView style={styles.container}>
-                <Image style={styles.image} source={require('../../img/menuiserieDetail.png')}/>
+                <Image style={styles.image} source={require('../../img/plafondMurDetail.jpg')}/>
                 <ScrollView style={styles.scrollView}>
-                    <Text style={styles.entete}>Pour la personnalisation de vos menuiserie, faites confiance à Peinture80.</Text>
+                    <Text style={styles.entete}>De la préparation du support à la pose de peinture ou de papier peint, nous nous ocupons de tout.</Text>
                     <Text style={styles.corpus}>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed suscipit ultricies massa eget fermentum. Quisque vulputate feugiat consequat. In rhoncus dui a ligula iaculis molestie. Vestibulum elit ipsum, pharetra non mi convallis, bibendum gravida lacus.
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ante ex, pharetra non tincidunt in, interdum ac ipsum. Donec luctus eu risus ultrices vestibulum. Maecenas eu lacinia leo. Fusce ultrices molestie nulla nec sollicitudin. Phasellus vestibulum semper sollicitudin. Nulla ac feugiat enim. Integer ornare, ligula sit amet semper fringilla, elit mi luctus ipsum, vel pretium libero dui vitae est. Integer tempus ultricies ex id ultricies. Phasellus a bibendum libero. In mollis volutpat tincidunt. Mauris dignissim nulla a dolor egestas, nec porttitor massa dignissim.
@@ -55,8 +55,8 @@ const styles = StyleSheet.create({
         paddingRight: 10,
         paddingBottom: 50,
         textAlign: 'justify',
-    },
+    }
 
 })
 
-export default Screen3;
+export default Screen1;
