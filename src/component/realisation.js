@@ -1,7 +1,8 @@
 import 'react-native-gesture-handler';
 import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
-import { StyleSheet, Text, View, Image, SafeAreaView, TouchableOpacity, StatusBar, ScrollView } from 'react-native';
+import { StyleSheet, Text, View, Image, TouchableOpacity, StatusBar, ScrollView, FlatList } from 'react-native';
+import data from '../../contentRealisation.json';
 
 //Importation des écrans 'détails des réalisations' pour la navigation
 import Screen1 from './realisation_detail/screen1';
@@ -9,53 +10,52 @@ import Screen2 from './realisation_detail/screen2';
 import Screen3 from './realisation_detail/screen3';
 import Screen4 from './realisation_detail/screen4';
 
-
 const ViewRealisation = ({ navigation }) => {
     return(
     <ScrollView style={styles.container}>
         <StatusBar/>
         <View style={styles.blockView}>
             <View style={styles.block}>
-                <TouchableOpacity onPress={() => navigation.navigate("Plafond et mur")}>
+                <TouchableOpacity onPress={() => navigation.navigate(data[0].title)}>
                     <Image style={styles.image} source={require('../img/cuisinePlafondMurRealisation.jpg')}/>
                 </TouchableOpacity>
                 <View style={styles.blockText}>
-                    <Text style={styles.blockText_titre}>Plafond et mur</Text>
+                    <Text style={styles.blockText_titre}>{data[0].title}</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
+                        {data[0].smallDesc}
                     </Text>
                 </View>
             </View>
             <View style={styles.block}>
-                <TouchableOpacity onPress={() => navigation.navigate("Sol et escalier")}>
+                <TouchableOpacity onPress={() => navigation.navigate(data[1].title)}>
                     <Image style={styles.image} source={require('../img/solEscalierRealisation.jpg')}/>
                 </TouchableOpacity>
                 <View style={styles.blockText}>
-                    <Text style={styles.blockText_titre}>Sol et escalier</Text>
+                    <Text style={styles.blockText_titre}>{data[1].title}</Text>
                     <Text style={styles.blockText_texte}>
-                       Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
+                       {data[1].smallDesc}
                     </Text>
                 </View>
             </View>
             <View style={styles.block}>
-                <TouchableOpacity onPress={() => navigation.navigate("Menuiserie")}>
+                <TouchableOpacity onPress={() => navigation.navigate(data[2].title)}>
                     <Image style={styles.image} source={require('../img/menuiserieRealisation.png')}/>
                 </TouchableOpacity>
                 <View style={styles.blockText}>
-                    <Text style={styles.blockText_titre}>Menuiserie</Text>
+                    <Text style={styles.blockText_titre}>{data[2].title}</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
+                        {data[2].smallDesc}
                     </Text>
                 </View>
             </View>
             <View style={styles.block}>
-                <TouchableOpacity onPress={() => navigation.navigate("Façade")}>
+                <TouchableOpacity onPress={() => navigation.navigate(data[3].title)}>
                     <Image style={styles.image} source={require('../img/facadeRealisation.png')}/>
                 </TouchableOpacity>
                 <View style={styles.blockText}>
-                    <Text style={styles.blockText_titre}>Façade</Text>
+                    <Text style={styles.blockText_titre}>{data[3].title}</Text>
                     <Text style={styles.blockText_texte}>
-                        Lorem ipsum dolor sit{"\n"}amet,consectetur{"\n"}adipiscing elit.Sed{"\n"}suscipit ultricies{"\n"}massa eget fermentum.
+                        {data[3].smallDesc}
                     </Text>
                 </View>
             </View>
@@ -80,10 +80,10 @@ const Realisation = () => {
             title: '',
             headerTransparent: true,
         })}/>
-          <Stack.Screen name="Plafond et mur" component={Screen1}/>
-          <Stack.Screen name="Sol et escalier" component={Screen2} />
-          <Stack.Screen name="Menuiserie" component={Screen3} />
-          <Stack.Screen name="Façade" component={Screen4} />
+          <Stack.Screen name={data[0].title} component={Screen1}/>
+          <Stack.Screen name={data[1].title} component={Screen2} />
+          <Stack.Screen name={data[2].title} component={Screen3} />
+          <Stack.Screen name={data[3].title} component={Screen4} />
         </Stack.Navigator>
     );
 }
